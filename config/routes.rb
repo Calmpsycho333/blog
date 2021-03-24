@@ -2,7 +2,7 @@ Rails.application.routes.draw do
     resources :posts
     
     devise_scope :user do
-        root to: "devise/sessions#new"
+        root :to => redirect("/users/sign_in")
     end
 
     devise_for :users, controllers: { sessions: "users/sessions" }
