@@ -26,6 +26,10 @@
     <%= form.text_area :content %>
   </div>
 
+  <div class="field">
+    <%= form.collection_select :group_id, @groups, :id, :name %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
